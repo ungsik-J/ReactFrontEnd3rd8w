@@ -1,0 +1,31 @@
+[
+  {
+    "name": "John",
+    "age": 35,
+    "job": "frontend",
+    "language": "react",
+    "pay": 400
+  },
+  {
+    "name": "Peter",
+    "age": 28,
+    "job": "backend",
+    "language": "java",
+    "pay": 300
+  },
+  {
+    "name": "Sue",
+    "age": 38,
+    "job": "publisher",
+    "language": "javascript",
+    "pay": 400
+  },
+  { "name": "Susan", "age": 45, "job": "pm", "language": "python", "pay": 500 },
+  {
+    "name": "David",
+    "age": 55,
+    "job": "cap",
+    "language": "master",
+    "pay": 9999
+  }
+]
