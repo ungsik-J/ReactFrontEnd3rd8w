@@ -17,12 +17,12 @@ const InfoTable = ({info}) => {
     <table style={tStyle}>
         <thead>
             <tr>
-                {Object.keys(info).map(key=><th style={cStyle}>{key}</th>)}
+                {Object.keys(info).map((key, i)=><th key={i} style={cStyle}>{key}</th>)}
             </tr>
         </thead>
         <tbody>
             <tr>
-                {Object.values(info).map(value=><td style={cStyle}>{value}</td>)}
+                {Object.values(info).map((value, i)=><td key={i} style={cStyle}>{value}</td>)}
             </tr>
         </tbody>
         

@@ -30,11 +30,12 @@ const Main = () => {
     const modes = useMemo(()=>[ "register", "upgrade", "delete", "초기화"], [])
 
     const handleSearchName = (n) =>{
-          // console.log("이름", n);
+          console.log(`handleSearchName, n : ${n}`);
           setName(n);
           setUpInfo(infos.filter(info=>info.name===n)[0])
     } 
     const handleClick = useCallback((mod) =>{
+      console.log(`handleClick, mod : ${mod}`);
         if(mod === 'delete'){
           if(name){
               setInfos(prev=>prev.filter(item => item.name !== name))
@@ -61,11 +62,15 @@ const Main = () => {
         // setName(null)
     }, [name])
     const handleRegister = (obj) =>{
+      console.log(`handleRegister, obj : ${obj}`);
+      console.log(obj);
       setInfos(prev=>([...prev, obj]));
-      console.log("obj", obj)
+      console.log("infos", infos)
       setName(obj.name);
     }
     const handleUpgrade = (obj) => {
+      console.log(`handleUpgrade, obj : ${obj}`);
+      console.log(obj);
       setInfos(prev=>prev.map(item => (item.name===obj.name ? obj: item)))
     }
   
@@ -79,7 +84,7 @@ const Main = () => {
           />
       </div>
       <div style={style}>
-          {modes.map(mod=><Link 
+          {modes.map((mod, i)=><Link key={i}
                               to="/"
                               onClick={(e)=>{
                                 e.preventDefault();

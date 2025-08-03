@@ -24,12 +24,13 @@ const EmployeeList = ({name, infos, handleSearchName}) => {
   const [info, setInfo] = useState(initialState)
 
   const handleClick = (n) =>{
+    console.log("#1.EmployeeList.handleClick n : ", n)
      setInfo(infos?.filter(info=>info.name===n)[0])
      handleSearchName(n)
   }
 
   useEffect(()=>{
-    console.log("info", name)
+    console.log("#2.EmployeeList.useEffect param name : ", name)
     setInfo(infos?.filter(info=>info.name===name)[0])
   }, [name, infos])
 
